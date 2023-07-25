@@ -1,6 +1,8 @@
 /** source/routes/posts.ts */
+//import controller_usuarios from '../controllers/controllers_usuarios';
 import express from 'express';
 import controllerHub from '../controllers/hub';
+import controllerUsuarios from '../controllers/usuarios';
 
 const router = express.Router();
 
@@ -18,6 +20,7 @@ router.get('/searchbyid/:id', controllerHub.searchbyid);
 
 router.post('/searchbyname', controllerHub.searchbyname);
 
+//router.get('/usuarios' , controllers_usuarios.getAlldata);
 
 
 export = router;

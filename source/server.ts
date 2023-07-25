@@ -3,6 +3,8 @@ import http from 'http';
 import express, { Express } from 'express';
 import morgan from 'morgan';
 import routesHub from './routes/hub';
+import routes_usuarios from './routes/users';
+
 
 const router: Express = express();
 
@@ -37,7 +39,7 @@ router.use((req, res, next) => {
 });
 
 router.use('/hub', routesHub);
-
+router.use('/usuarios', routes_usuarios);
 
 /** Error handling */
 router.use((req, res, next) => {
@@ -46,6 +48,8 @@ router.use((req, res, next) => {
         message: error.message
     });
 });
+
+
 
 
 
