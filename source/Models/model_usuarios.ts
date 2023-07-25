@@ -45,6 +45,7 @@ export class model_users {
         this.user.sync();
 
         //HICE UN CAMBIO
+        //aasds
     }
     async listar() {
 
