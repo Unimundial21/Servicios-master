@@ -7,7 +7,7 @@ import {
     Sequelize, InferAttributes, InferCreationAttributes, CreationOptional, NonAttribute, ForeignKey,
 }from 'sequelize';
 export class model_users {
-    
+
     percistencia = new percistenciaORM();
     sequelize = this.percistencia.sequelize;
     public user = this.sequelize.define('users', {
@@ -43,6 +43,8 @@ export class model_users {
     });constructor() {
 
         this.user.sync();
+
+        //HICE UN CAMBIO
     }
     async listar() {
 
